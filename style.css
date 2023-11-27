@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-color: darkcyan;
+    display: grid;
+    place-items: center;
+}
+header h1{
+    font-size: 3rem;
+    color: orangered;
+    text-decoration: underline;
+    text-decoration-color: orange;
+    text-decoration-thickness: 10px;
+    text-shadow: 2px 2px 5px black;
+    font-variant: small-caps;
+}
+.container{
+    height: 300px;
+    border: 0.5px solid orangered;
+    border-top: 16px solid orangered;
+    border-radius: 30px;
+}
+
+#text-animation{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 60px;
+    border: 0px solid black;
+    font-size: 8rem;
+    color: whitesmoke;
+    position: relative;
+}
+
+
+#text-animation::before{
+    content: "GitHub.Com!";
+    position: absolute;
+    color: orange;
+    border-right: 5px solid orange;
+    width: 100%;
+    overflow: hidden;
+    animation: text-animation 1.2s ease infinite alternate;
+}
+
+@keyframes text-animation{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 95%;
+    }
+}
